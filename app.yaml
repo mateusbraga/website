@@ -1,0 +1,41 @@
+application: mateusbraga-page
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+  #- url: /rest(|/.*)
+    #script: _go_app
+
+  #- url: /(|#/en|#/pt)
+    #static_files: client/index.html
+    #upload: client/index.html
+    #mime_type: text/html; charset=utf-8
+
+  #- url: /css
+    #static_dir: client/css
+
+  #- url: /images
+    #static_dir: client/images
+
+  #- url: /js
+    #static_dir: client/js
+
+  #- url: /files
+    #static_dir: client/files
+
+  #- url: /(.*\.ico)
+    #static_dir: client/images
+
+  #- url: /sitemap.xml
+    #static_files: client/sitemap.xml
+    #upload: client/sitemap.xml
+    #mime_type: application/xml; charset=utf-8
+
+  - url: /.*
+    script: _go_app
+  
+  #- url: /(.*\.html)
+    #mime_type: text/html; charset=utf-8
+    #static_files: client/\1
+    #upload: client/(.*\.html)
