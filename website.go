@@ -13,18 +13,30 @@ func init() {
     m.Use(acceptlang.Languages())
     m.Use(render.Renderer())
 
-    m.Get("/js/script.js", func (r render.Render, languages acceptlang.AcceptLanguages) {
+    m.Get("", func (r render.Render, languages acceptlang.AcceptLanguages) {
         for _, language := range languages {
             switch language.Language {
             case "en-US", "en":
-                r.HTML(200, "script", "en-US")
+
+                langs := make(map[string]string)
+                langs["en"]=""
+                langs["pt"]="hidden"
+
+                r.HTML(200, "index", langs)
                 return
             case "pt-BR", "pt":
-                r.HTML(200, "script", "pt-BR")
+                langs := make(map[string]string)
+                langs["en"]="hidden"
+                langs["pt"]=""
+                r.HTML(200, "index", langs)
                 return
             }
         }
-        r.HTML(200, "script", "pt-BR")
+
+        langs := make(map[string]string)
+        langs["en"]="hidden"
+        langs["pt"]=""
+        r.HTML(200, "index", langs)
     })
 
     http.Handle("/", m)

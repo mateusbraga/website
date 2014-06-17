@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="utf-8">
+<title>Mateus Braga</title>
+
+<meta name="description" content="Página de Mateus Braga">
+<meta name="description" content="Mateus Braga's Webpage">
+<meta name="author" content="Mateus Braga">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+<!-- Enable HTML5 elements in IE versions prior to version 9.-->
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- IE does not support media queries. Use enhanced stylesheet by default. -->
+<!--[if (lt IE 9)&(!IEMobile)]>
+<link rel="stylesheet" type="text/css" href="enhanced.css" />
+<![endif]-->
+
+<link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" href="/css/style.css">
+
+<!--Google analytics stuff-->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-37444628-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+</script>
+
+<script>
+function changeLanguage(event) {
+    if (event.target.id=="br-flag") {
+        document.getElementById("portuguese-content").style.display="block";
+        document.getElementById("english-content").style.display="none";
+    } else {
+        document.getElementById("portuguese-content").style.display="none";
+        document.getElementById("english-content").style.display="block";
+    }
+}
+</script>
+
+</head>
+<body>
+<div id="wrapper">
+
+<header>
+<h1>Mateus Braga</h1>
+<img src="/images/Mateus-Braga.jpg" height="180" width="162" alt="Mateus Braga">
+<ul>
+<li><img src="/images/BR-flag.png" alt="Português" id="br-flag" class="language-icon" onclick="changeLanguage(event)"></li>
+<li><img src="/images/USA-flag.png" alt="English" id="usa-flag" class="language-icon" onclick="changeLanguage(event)"></li>
+</ul>
+</header>
+
+
+<article class="content {{.en}}" id="english-content">
+<section>
+<h3>About Me</h3>
+
+<p> 
+
+I am a college student and programmer. My main area is distributed system, which I have been studying for 2 years and have done my <a href="/files/Monografia Mateus Antunes Braga.pdf">bachelor's thesis</a> in. The biggest project I have implemented is <a href="https://github.com/mateusbraga/freestore">FreeStore</a>, but I have a varied experience (see <a href="/files/Mateus%20Braga%20-%20Curriculo.pdf">Résumé</a>)
+
+</p>
+
+<p> 
+
+Software for me is the challenge to solve a problem the simplest way possible. I believe that only this way we can control its complexity and understand its problems. No milaculous tools/practices matters if we don't understand what they do and what the project really needs. That is why I guide my projects through principles like: understand the problem, understand the solution, adopt simplifications and avoid generalizations.
+
+</p>
+
+<p> 
+
+Regarding tecnologies, I prefer the Go programming language and a service-oriented architecture. I've had experience with Java, Python and Objective-C, but in my opinion they are not as productives to program in as Go. I use Linux for 5 years now and have developed a good understanding of how it works. Others tecnologies like Vi, Docker, Git, Amazon S3 and Google Appengine has its place in my projects.
+
+</p>
+
+<p>
+
+I understand that tecnologies don't do miracles, and I reserved a significant time in my education to learn more about communication and leadership. My experience in CJR Junior Enterprise and in Toastmasters helped me a lot in this regard.
+
+</p>
+
+<p>
+
+<a href="/files/Mateus%20Braga%20-%20Resume.pdf">Résumé</a> [Last Updated: 06/17/2014]
+
+</p>
+
+</section>
+
+<section>
+<h3>Connect With Me</h3>
+
+<p><a href="mailto:mateus.a.braga@gmail.com">
+<img src="/images/email.png" height="16" width="16" alt="Email">  Email
+</a></p>
+
+<p><a href="http://www.linkedin.com/in/bragamateus/en">
+<img src="/images/linkedin.png" height="16" width="16" alt="LinkedIn">  LinkedIn
+</a></p>
+
+<p><a href="https://github.com/mateusbraga">
+<img src="/images/github.png" height="16" width="16" alt="GitHub">  GitHub
+</a></p>
+</section>
+</article>
+
+<!--Portuguese pt-BR-->
+<article class="content {{.pt}}" id="portuguese-content">
+
+<section>
+<h3>Sobre Mim</h3>
+
+<p> 
+
+Eu sou um universitário e programador. Minha principal área é sistemas distribuídos, a qual venho estudando a 2 anos e em que realizei meu <a href="/files/Monografia Mateus Antunes Braga.pdf">trabalho de graduação</a>. O maior projeto que implementei foi o <a href="https://github.com/mateusbraga/freestore">FreeStore</a>, mas tenho um experiência variada (ver <a href="/files/Mateus%20Braga%20-%20Curriculo.pdf">Currículo Profissional</a>).
+
+</p>
+
+<p> 
+
+Software para mim é um desafio para resolver um problema da forma mais simples
+possível. Eu acredito que é apenas dessa forma que podemos controlar sua
+complexidade e entender seus problemas. Não adianta ferramentas/práticas
+milagrosas sem entender o que elas fazem e nem o que
+o projeto realmente precisa.  Por isso eu guio meus projetos por princípios
+como: entender o problema, entender a solução, adotar simplificações e evitar
+generalizar.
+
+</p>
+
+<p> 
+
+Em relação a tecnologias, eu tenho preferência pela linguagem Go e uma
+arquitetura orientada a serviços web. Eu já tive experiências com Java, Python
+e Objective-C, mas na minha opinião são tão produtivas para se programar como
+Go. Utilizo Linux a mais de 5 anos e desenvolvi um bom conhecimento no seu
+funcionamento. Outras tecnologias como Vi, Docker, Git, Amazon S3, Google
+Appengine tem seu espaço nos meus projetos.  
+
+</p>
+
+<p>
+
+Eu entendo que sopa de tecnologia não faz milagre, e reservei um espaço
+significativo na minha educação para aprender mais sobre comunicação
+e liderança. Minha experiência na CJR Empresa Júnior e no Toastmasters me
+ajudou bastante nesse ponto.
+
+</p>
+
+<p>
+
+<a href="/files/Mateus%20Braga%20-%20Curriculo.pdf">Currículo Profissional</a> [Atualizado: 17/06/2014]
+
+</p>
+
+</section>
+
+<section>
+<h3>Conecte-se Comigo</h3>
+
+<p><a href="mailto:mateus.a.braga@gmail.com">
+<img src="/images/email.png" height="16" width="16" alt="Email">  Email
+</a></p>
+
+<p><a href="http://www.linkedin.com/in/bragamateus">
+<img src="/images/linkedin.png" height="16" width="16" alt="LinkedIn">  LinkedIn
+</a></p>
+
+<p><a href="https://github.com/mateusbraga">
+<img src="/images/github.png" height="16" width="16" alt="GitHub">  GitHub
+</a></p>
+</section>
+</article>
+</div>
+
+</body>
+</html>
