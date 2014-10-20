@@ -33,9 +33,10 @@ func init() {
             }
         }
 
+        // default language
         langs := make(map[string]string)
-        langs["en"]="hidden"
-        langs["pt"]=""
+        langs["en"]=""
+        langs["pt"]="hidden"
         r.HTML(200, "index", langs)
     })
 
