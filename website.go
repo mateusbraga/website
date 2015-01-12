@@ -9,45 +9,6 @@ import (
 	"strings"
 )
 
-//func init() {
-//m := martini.Classic()
-//m.Use(acceptlang.Languages())
-//m.Use(render.Renderer())
-
-//m.Get("/:lang", func(params martini.Params, r render.Render, languages acceptlang.AcceptLanguages) {
-//lang := params["lang"]
-
-//langSupported := map[string]bool{
-//"pt": true,
-//"en": true,
-//}
-
-////if !langSupported[lang] {
-////// try to get it from header
-////for _, language := range languages {
-////switch language.Language {
-////case "en-US", "en":
-////lang = "en"
-////break
-////case "pt-BR", "pt":
-////lang = "pt"
-////break
-////}
-////}
-////}
-
-//data := map[string]interface{}{}
-//switch lang {
-//case "en":
-//r.HTML(200, "page_en", data)
-//default:
-//r.HTML(200, "page_pt", data)
-//}
-//})
-
-//http.Handle("/", m)
-//}
-
 var (
 	DefaultPort = "8080"
 
