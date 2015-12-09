@@ -12,8 +12,8 @@ import (
 var (
 	DefaultPort = "8080"
 
-	englishTemplate    = template.Must(template.ParseFiles("templates/page_en.tmpl"))
-	portugueseTemplate = template.Must(template.ParseFiles("templates/page_pt.tmpl"))
+	englishTemplate    = template.Must(template.ParseFiles("templates/page_en.html"))
+	portugueseTemplate = template.Must(template.ParseFiles("templates/page_pt.html"))
 )
 
 func homepage(res http.ResponseWriter, req *http.Request) {
